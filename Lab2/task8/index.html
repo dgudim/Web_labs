@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Задача 8</title>
+        <title>Задача 13</title>
     </head>
 
     <body>
-        <h1>Запись на курсы</h1>
-        <form method="post" action="#">
-            <label>Имя:</label>
-            <br>
-            <input placeholder="Введите имя" name="Имя">
+        <h2>Запись на курсы</h2>
+        <hr>
+
+        <form action="someaction.php" method="post">
+            <p class="paragraph" id="name-input-paragraph">
+                Имя:<br>
+                <input type="text" placeholder="Введите имя" name="person_name">
+            </p>
+            <p class="paragraph" id="lang-select-paragraph">
+                Язык программирования:<br>
+                <input type="radio" name="language" value="c++"> C++ <br>
+                <input type="radio" name="language" value="php"> PHP <br>
+                <input type="radio" name="language" value="java"> Java <br>
+            </p>
+            <p class="paragraph" id="experience-info-paragraph">
+                Дополнительная информация:<br>
+                <textarea placeholder="Есть опыт программирования на Java" cols="50" rows="4" name="experience_info"></textarea>
+            </p>
+            <p class="paragraph" id="form-bottom-button-paragraph">
+                Секретное слово:<br>
+                <input type="password" placeholder="Введите пароль" name="input_password_field"><br>
+                <button type="submit" name="submit_form_button" value="submit_form">Отправить</button>
+                <button type="reset" name="reset_form_button" value="reset_form">Очистить</button>
+            </p>
         </form>
+        <hr>
+        <p><em>www.bsuir.by</em></p>
+
     </body>
 
 </html>
