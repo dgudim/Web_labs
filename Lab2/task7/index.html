@@ -10,8 +10,11 @@
 
     <body>
         <video controls preload="metadata" poster="posterimage.jpg" height="300" width="400">
+            <source src="landscape.webm" type="video/webm">
             <source src="landscape.mp4" type="video/mp4">
-            <track label="Русский" kind="subtitles" srclang="ru" src="landscape.vtt" default>
+            <source src="landscape.ogv" type="video/ogg">
+            <track label="Русский" kind="subtitles" srclang="ru" src="landscape_ru.vtt" default>
+            <track label="English" kind="subtitles" srclang="ru" src="landscape_en.vtt">
         </video>
     </body>
 
