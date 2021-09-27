@@ -14,22 +14,22 @@
 
         <form action="someaction.php" method="post">
             <p class="paragraph" id="name-input-paragraph">
-                Имя:<br>
+                <label>Имя:</label><br>
                 <input type="text" placeholder="Введите имя" name="person_name">
             </p>
             <p class="paragraph" id="lang-select-paragraph">
-                Язык программирования:<br>
+                <label>Язык программирования:</label><br>
                 <label><input type="radio" name="language" value="lang_select_cpp"> C++</label><br>
                 <label><input type="radio" name="language" value="lang_select_php"> PHP </label><br>
                 <label><input type="radio" name="language" value="lang_select_java"> Java </label>
             </p>
             <p class="paragraph" id="experience-info-paragraph">
-                Дополнительная информация:<br>
+                <label>Дополнительная информация:</label><br>
                 <textarea placeholder="Есть опыт программирования на Java" cols="50" rows="4"
                     name="experience_inf"></textarea>
             </p>
             <p class="paragraph" id="form-bottom-button-paragraph">
-                Секретное слово:<br>
+                <label>Секретное слово:</label><br>
                 <input type="password" placeholder="Введите пароль" name="input_password_field"><br>
                 <button type="submit" name="submit_form_button" value="submit_form">Отправить</button>
                 <button type="reset" name="reset_form_button" value="reset_form">Очистить</button>
