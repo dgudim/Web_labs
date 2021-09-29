@@ -1,0 +1,16 @@
+header {
+    font: bold 36px Arial, sans-serif;
+    line-height: 14px;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #ad91ff;
+    padding: 10px;
+    
+}
+
+main {}
