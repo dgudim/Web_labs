@@ -1,16 +1,28 @@
-header {
-    font: bold 36px Arial, sans-serif;
-    line-height: 14px;
-    height: 75px;
+
+body{
+    margin: 0;
+}
+#header{
+    background-color: rgb(195, 158, 255);
     position: fixed;
-    top: 0;
     width: 100%;
-    display: table-cell;
-    vertical-align: middle;
     text-align: center;
-    background-color: #ad91ff;
-    padding: 10px;
-    
+    padding: 15px 0;
+    font: 20px Arial, sans-serif;
+    z-index: 100;
 }
 
-main {}
+#main_container{
+    position:absolute;
+    margin-top: 65px;
+    width: 100%;
+}
+
+#main_container p{
+    width: 70%;
+    border: 1px solid rgb(214, 214, 214);
+    margin: 0 auto;
+    text-align: left;
+    color: #000;
+    padding: 30px 10px;
+}
