@@ -18,11 +18,11 @@ body{
     width: 100%;
 }
 
-#main_container p{
+#inner_container{
     width: 70%;
     border: 1px solid rgb(214, 214, 214);
     margin: 0 auto;
     text-align: left;
     color: #000;
-    padding: 30px 10px;
+    padding: 30px 15px;
 }
