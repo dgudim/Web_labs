@@ -16,7 +16,7 @@ main h1, main h2, p {
 
 body {
     margin: 0px;
-    font-family:arial, sans-serif;
+    font-family: arial, sans-serif;
 }
 
 header {
@@ -77,8 +77,13 @@ main {
     font-size: 17px;
 }
 
-h1{
-    margin: 10px 0
+h1 {
+    margin-bottom: 6px;
+    margin-top: 20px
+}
+
+h1+p{
+    margin-top: 0
 }
 
 img {
