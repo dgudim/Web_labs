@@ -1,5 +1,6 @@
 body {
-  margin: 0px
+  margin: 0px;
+  font-family: Arial, sans-serif;
 }
 
 ul {
@@ -7,12 +8,12 @@ ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 li {
   background: #444;
-  display: block;
   float: left;
   padding: 1em;
   position: relative;
@@ -44,4 +45,4 @@ li:hover>.dropdown_list{
 .dropdown_list li{
   width: 90%;
   padding: 16px 5%
-}
+} 
