@@ -2,12 +2,18 @@ header, section, footer {
     background: rgb(221, 221, 221);
 }
 
+header {
+    padding-bottom: 35px
+}
+
 ul, li, div#sections_footer_container, span#footer-info {
     background: rgb(0, 128, 100);
 }
 
 main {
     background: white;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 main h1, main h2, p {
@@ -18,10 +24,6 @@ body {
     margin: 0px;
     font-family: arial, sans-serif;
     word-wrap: break-word;
-}
-
-header {
-    padding-bottom: 35px
 }
 
 ul {
@@ -54,11 +56,6 @@ li.active a {
 li:hover:not(.active) {
     background: rgb(0, 99, 77);
     cursor: pointer;
-}
-
-main {
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 h1, h2, h3 {
