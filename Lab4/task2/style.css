@@ -1,0 +1,30 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.container+.container {
+    margin-top: 25px
+}
+
+#pointer {
+    cursor: pointer;
+}
+
+#cursor_loading {
+    cursor: all-scroll;
+}
+
+#loading {
+    cursor: crosshair;
+}
+
+#custom {
+    cursor: pointer;
+}
