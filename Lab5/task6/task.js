@@ -19,6 +19,6 @@ function dayOfWeek(day) {
         case 5: return 'Пятница'
         case 6: return 'Суббота'
         case 7: return 'Воскресенье'
-        default: return 'index out of range'
+        default: return 'no such day'
     }
 }
