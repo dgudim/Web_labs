@@ -26,7 +26,6 @@ img#saturate{
 
 
 img#hue-rotate{
-    filter: hue-rotate(0deg);
     animation: hueShift 2s infinite;
 }
 
