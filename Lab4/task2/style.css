@@ -18,13 +18,13 @@ main {
 }
 
 #cursor_loading {
-    cursor: all-scroll;
+    cursor: progress;
 }
 
 #loading {
-    cursor: crosshair;
+    cursor: wait;
 }
 
 #custom {
-    cursor: pointer;
+    cursor: url('cursor.png'), auto;
 }
