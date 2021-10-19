@@ -1,0 +1,12 @@
+main{
+    padding: 10px 60px;
+    background: rgb(235, 235, 235);
+    display: inline-block;
+}
+
+#bg {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: #b1c5d1;
+}
