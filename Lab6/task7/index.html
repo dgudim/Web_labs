@@ -32,8 +32,10 @@
     <script>
       let largeImg = document.getElementById("largeImg");
       document.getElementById("thumbs").onclick = function (event) {
-        if (event.target.tagName == "img") {
-          largeImg.src = event.target.src;
+        if (event.target.tagName.toLowerCase() == "img") {
+          largeImg.src = event.target.parentNode.href;
+          largeImg.title = event.target.parentNode.title;
+          return false;
         }
       }
     </script>
