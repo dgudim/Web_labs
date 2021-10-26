@@ -8,10 +8,12 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#beb5db", endColorstr="#a1b9e5", GradientType=1);
 }
 
-#container{
+#container {
     position: relative;
     top: 400px;
     left: 30px;
+    width: 165px;
+    transform-origin: center;
 }
 
 #yacht {
@@ -25,7 +27,7 @@ main {
     position: relative;
 }
 
-#tower{
+#tower {
     width: 10px;
     height: 95px;
     background: #6464c8;
@@ -37,7 +39,7 @@ main {
     z-index: 1;
 }
 
-#tower::before{
+#tower::before {
     content: '';
     width: 0;
     height: 0;
@@ -48,7 +50,7 @@ main {
     bottom: -70px;
 }
 
-#tower::after{
+#tower::after {
     content: '';
     width: 0;
     height: 0;
@@ -59,42 +61,80 @@ main {
     bottom: -70px;
 }
 
-#tower.animate_sails::before, #tower.animate_sails::after{
+#tower.animate_sails::before, #tower.animate_sails::after {
     animation: scale_sails 0.5s linear;
     animation-fill-mode: forwards;
 }
 
-.animate_tower{
+.animate_tower {
     animation: rotate_tower 0.6s ease-in-out;
     animation-fill-mode: forwards;
 }
 
-.animate_borders{
+.animate_borders {
     animation: transform_borders 0.3s linear;
     animation-fill-mode: forwards;
 }
 
-.animate_yacht{
-    animation: go 1.5s ease-in-out;
-    animation-fill-mode: forwards;
+.animate_yacht {
+    animation: pre_rotate 0.5s ease-in-out forwards, go 4s ease-in-out forwards, rotate 0.5s 0.5s alternate 8 ease-in-out, post_rotate 5.5s ease-in-out forwards;
 }
 
 @keyframes transform_borders {
-    from {border-radius: 5px;}
-    to {border-radius: 5px 5px 55px 55px;}
+    from {
+        border-radius: 5px;
+    }
+    to {
+        border-radius: 5px 5px 55px 55px;
+    }
 }
 
 @keyframes go {
-    from {left: 30px;}
-    to {left: 1030px;}
+    from {
+        left: 30px;
+    }
+    to {
+        left: 1030px;
+    }
+}
+
+@keyframes pre_rotate {
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes post_rotate {
+    to {
+        transform: rotate(0);
+    }
 }
 
 @keyframes rotate_tower {
-    from {transform: rotate(-90deg);}
-    to {transform: rotate(0);}
+    from {
+        transform: rotate(-90deg);
+    }
+    to {
+        transform: rotate(0);
+    }
 }
 
 @keyframes scale_sails {
-    from {bottom: -70px; border-bottom: 0 solid white;}
-    to {bottom: 20px; border-bottom: 90px solid white;}
+    from {
+        bottom: -70px;
+        border-bottom: 0 solid white;
+    }
+    to {
+        bottom: 20px;
+        border-bottom: 90px solid white;
+    }
 }
