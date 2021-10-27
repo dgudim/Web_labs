@@ -1,3 +1,7 @@
+body{
+    background: rgb(255, 255, 255);
+}
+
 main {
     height: 500px;
     width: 100%;
@@ -8,9 +12,17 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#beb5db", endColorstr="#a1b9e5", GradientType=1);
 }
 
+#cover{
+    height: 200px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 500px;
+}
+
 #container {
     position: relative;
-    top: 400px;
+    top: 380px;
     left: 30px;
     width: 165px;
     transform-origin: center;
@@ -64,6 +76,15 @@ main {
 #tower.animate_sails::before, #tower.animate_sails::after {
     animation: scale_sails 0.5s linear;
     animation-fill-mode: forwards;
+}
+
+#wave1, #wave2, #wave3 {
+    position: absolute;
+    top: 500px;
+}
+
+.animate_wave {
+    animation: move_wave_to_pos 0.5s ease-in-out forwards, move_wave 0.5s 0.5s alternate 8 ease-in-out;
 }
 
 .animate_tower {
@@ -136,5 +157,23 @@ main {
     to {
         bottom: 20px;
         border-bottom: 90px solid white;
+    }
+}
+
+@keyframes move_wave {
+    from {
+        top: 400px;
+    }
+    to {
+        top: 385px;
+    }
+}
+
+@keyframes move_wave_to_pos {
+    from {
+        top: 500px;
+    }
+    to {
+        top: 400px;
     }
 }
