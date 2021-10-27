@@ -1,4 +1,4 @@
-body{
+body {
     background: rgb(255, 255, 255);
 }
 
@@ -12,7 +12,7 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#beb5db", endColorstr="#a1b9e5", GradientType=1);
 }
 
-#cover{
+#cover {
     height: 200px;
     width: 100%;
     background: white;
@@ -74,8 +74,7 @@ main {
 }
 
 #tower.animate_sails::before, #tower.animate_sails::after {
-    animation: scale_sails 0.5s linear;
-    animation-fill-mode: forwards;
+    animation: scale_sails 0.5s linear forwards;
 }
 
 #wave1, #wave2, #wave3 {
@@ -98,7 +97,7 @@ main {
 }
 
 .animate_yacht {
-    animation: pre_rotate 0.5s ease-in-out forwards, go 4s ease-in-out forwards, rotate 0.5s 0.5s alternate 8 ease-in-out, post_rotate 5.5s ease-in-out forwards;
+    animation: pre_rotate 0.5s ease-in-out forwards, go 4s ease-in-out forwards, lift 1.4s 1.3s ease-in-out forwards, rotate 0.5s 0.5s alternate 8 ease-in-out, post_rotate 5.5s ease-in-out forwards;
 }
 
 @keyframes transform_borders {
@@ -116,6 +115,18 @@ main {
     }
     to {
         left: 1030px;
+    }
+}
+
+@keyframes lift {
+    0% {
+        top: 380px;
+    }
+    50% {
+        top: 322px;
+    }
+    100% {
+        top: 380px;
     }
 }
 
@@ -162,10 +173,10 @@ main {
 
 @keyframes move_wave {
     from {
-        top: 400px;
+        top: 375px;
     }
     to {
-        top: 385px;
+        top: 365px;
     }
 }
 
@@ -174,6 +185,6 @@ main {
         top: 500px;
     }
     to {
-        top: 400px;
+        top: 375px;
     }
 }

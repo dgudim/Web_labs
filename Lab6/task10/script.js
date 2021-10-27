@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         setTimeout(function () {wave1.classList.add("animate_wave");}, 400);
         setTimeout(function () {wave2.classList.add("animate_wave");}, 500);
         setTimeout(function () {wave3.classList.add("animate_wave");}, 600);
+        setTimeout(function () {tower.classList.add("blow_sails");}, 600);
         setTimeout(function () {container.classList.add("animate_yacht");}, 600);
     }
 });
