@@ -23,7 +23,7 @@ main {
 #container {
     position: relative;
     top: 380px;
-    left: 30px;
+    left: 100px;
     width: 165px;
     transform-origin: center;
 }
@@ -73,13 +73,29 @@ main {
     bottom: -70px;
 }
 
-#tower.animate_sails::before, #tower.animate_sails::after {
-    animation: scale_sails 0.5s linear forwards;
+#tower.animate_sails::before{
+    animation: scale_sails 0.5s linear forwards, blow_sails_left 0.5s 0.5s alternate 8 ease-in-out;
+}
+
+#tower.animate_sails::after {
+    animation: scale_sails 0.5s linear forwards, blow_sails_rigth 0.5s 0.5s alternate 8 ease-in-out;
 }
 
 #wave1, #wave2, #wave3 {
     position: absolute;
     top: 500px;
+}
+
+#wave3{
+    filter:sepia(1) saturate(2) hue-rotate(190deg);
+}
+
+#wave2{
+    filter:sepia(1) saturate(2) hue-rotate(180deg);
+}
+
+#wave1{
+    filter:sepia(1) saturate(2) hue-rotate(170deg);
 }
 
 .animate_wave {
@@ -97,7 +113,7 @@ main {
 }
 
 .animate_yacht {
-    animation: pre_rotate 0.5s ease-in-out forwards, go 4s ease-in-out forwards, lift 1.4s 1.3s ease-in-out forwards, rotate 0.5s 0.5s alternate 8 ease-in-out, post_rotate 5.5s ease-in-out forwards;
+    animation: pre_rotate 0.5s ease-in-out forwards, go 4s ease-in-out forwards, lift 2.3s 1s ease-in-out forwards, rotate 0.5s 0.5s alternate 8 ease-in-out, post_rotate 5.5s ease-in-out forwards;
 }
 
 @keyframes transform_borders {
@@ -111,10 +127,10 @@ main {
 
 @keyframes go {
     from {
-        left: 30px;
+        left: 100px;
     }
     to {
-        left: 1030px;
+        left: 1130px;
     }
 }
 
@@ -122,8 +138,11 @@ main {
     0% {
         top: 380px;
     }
-    50% {
-        top: 322px;
+    20%{
+        top: 390px;
+    }
+    60% {
+        top: 330px;
     }
     100% {
         top: 380px;
@@ -168,6 +187,28 @@ main {
     to {
         bottom: 20px;
         border-bottom: 90px solid white;
+    }
+}
+
+@keyframes blow_sails_left {
+    from {
+        left: -75px;
+        border-left: 70px solid transparent;
+    }
+    to {
+        left: -65px;
+        border-left: 60px solid transparent;
+    }
+}
+
+@keyframes blow_sails_rigth {
+    from {
+        left: -55px;
+        border-right: 40px solid transparent;
+    }
+    to {
+        left: -45px;
+        border-right: 45px solid transparent;
     }
 }
 
