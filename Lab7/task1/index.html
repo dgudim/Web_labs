@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <header>
+            <div id="project_name">
+                Attractor simulation
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#contact">Sources</a></li>
+                    <li style="float:right"><a href="#top">Up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="content">
+            <section id="about">
+                <div id=title_and_img>
+
+                    <span id="about_title">Visual representation of a polynomial attractor</span>
+
+                    <div id="img_container">
+                        <img id="about_img" src="images/polynomial_attractor.png" alt="Polynomial attarctor">
+                    </div>
+                </div>
+                <div class="description_section">
+                    <h2>Description</h2>
+                    <p class="description">
+                        In the mathematical field of dynamical systems, an attractor is a set of states toward which a
+                        system tends to evolve, for a wide variety of starting conditions of the system. System values
+                        that get close enough to the attractor values remain close even if slightly disturbed.
+                        <br><br>A dynamical system is generally described by one or more differential or difference
+                        equations. The
+                        equations of a given dynamical system specify its behavior over any given short period of time.
+                        To
+                        determine the system's behavior for a longer period, it is often necessary to integrate the
+                        equations, either through analytical means or through iteration
+                    </p>
+                </div>
+                <div class="description_section">
+                    <h2>Implementation</h2>
+                    <p class="description">
+                        Take about 1 000 00 points, scatter them randomly on your simulation square, iterate each of the
+                        points using some attarctor equations(for example Lorenz), at each iteration add some constant
+                        value to an
+                        intensity map at every point's coordinate. Do about a million iterations. You will get an
+                        intensity
+                        map that can be converted to color map.
+                    </p>
+                </div>
+
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background: rgb(36, 36, 36);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+span, li a, p{
+    color: white;
+}
+
+h2{
+    color: rgb(255, 228, 206);
+}
+
+#project_name {
+    color: rgb(255, 230, 194);
+    padding: 1.7rem 0;
+    font-size: 2rem;
+    text-align: center;
+    background: rgba(56, 56, 56, 0);
+    background: -moz-linear-gradient(180deg, rgba(190, 181, 219, 0) 90%, rgba(48, 48, 48, 1) 100%), url(images/popcorn_attractor.png);
+    background: -webkit-linear-gradient(180deg, rgba(190, 181, 219, 0) 90%, rgba(48, 48, 48, 1) 100%), url(images/popcorn_attractor.png);
+    background: linear-gradient(180deg, rgba(190, 181, 219, 0) 90%, rgba(48, 48, 48, 1) 100%), url(images/popcorn_attractor.png);
+    background-position: center center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(36, 33, 30);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.content_sticky{
+    margin-top: 48px;
+}
+
+main {
+    padding-top: 40px;
+    background: rgb(102, 102, 102);
+    background: linear-gradient(0deg, rgba(102, 102, 102, 1) 83%, rgba(48, 48, 48, 1) 100%);
+}
+
+#about {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#title_and_img {
+    border: 1px solid white;
+    display: inline-block;
+    height: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#about_title {
+    font-size: 1.2rem;
+}
+
+#about_img {
+    width: 400px;
+    border: 1px solid rgb(138, 138, 138);
+    border-radius: 5px
+}
+
+.description_section {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+p.description {
+    font-size: 1.3rem
+}
+
+@media only screen and (max-width: 830px) {
+    #about {
+        flex-direction: column;
+    }
+    .description_section {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about_img {
+        width: 90%;
+    }
+}
