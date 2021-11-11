@@ -6,18 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" type="text/css">
-        <title>Attractor simulation</title>
+        <title>Beautiful world of attractors</title>
     </head>
 
     <body>
         <header id="header">
             <div id="project_name">
-                Attractor simulation
+                Beautiful world of attractors
             </div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#about">Info</a></li>
+                    <li><a href="#slider">Galery</a></li>
                     <li><a href="#contact">Sources</a></li>
                     <li style="float:right"><a href="#project_name">Up</a></li>
                 </ul>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="description_section">
-                    <h2>What are attractors</h2>
+                    <h2>What are attractors?</h2>
                     <hr>
                     <p class="description">
                         In the mathematical field of dynamical systems, an attractor is a set of states toward which a
@@ -63,17 +63,66 @@
                     </p>
                 </div>
             </section>
-            <hr>
-            <div id="slider_container">
-                <button id="prev_img"></button>
-                <img src="images/attractor1.jpg" alt="" id="slideshow_img">
-                <button id="next_img"></button>
+            <div id="galerry_section_title_container">
+                <span id="galerry_section_title">More images of attractors</span>
+            </div>
+            <div id="slider">
+                <!-- Loading Screen -->
+                <div data-u="loading" class="spin">
+                    <img src="images/spin.svg" alt="loading_image_svg" />
+                </div>
+                <div data-u="slides" id="slides_container">
+                    <div>
+                        <img data-u="image" src="images/attractor1.png" alt="attractor 1" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/attractor2.png" alt="attractor 2" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/attractor3.png" alt="attractor 3" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/attractor4.png" alt="attractor 4" />
+                    </div>
+                    <div>
+                        <img data-u="image" src="images/attractor5.png" alt="attractor 5" />
+                    </div>
+                </div>
+                <!-- Bullet Navigator -->
+                <div data-u="navigator" class="bullet_navigator" style="position:absolute;bottom:16px;right:16px;"
+                    data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                    <div data-u="prototype" class="bullet_circle" style="width:12px;height:12px;">
+                        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                            <circle class="bullet" cx="8000" cy="8000" r="5800"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Arrow Navigator -->
+                <div data-u="arrowleft" class="arrow_navigator" style="width:65px;height:65px;top:0px;left:35px;"
+                    data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <polyline class="arrow" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                    </svg>
+                </div>
+                <div data-u="arrowright" class="arrow_navigator" style="width:65px;height:65px;top:0px;right:35px;"
+                    data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <polyline class="arrow" points="4960,1920 11040,8000 4960,14080 "></polyline>
+                    </svg>
+                </div>
             </div>
         </main>
-        <footer>
-
+        <footer id="contact">
+            <div id="footer_container">
+                <button class="footer_button">
+                    <img src="images/github.svg" alt="github_logo">
+                    <span>Download sources</span>
+                </button>
+            </div>
         </footer>
+        <script src="jssor.slider-28.1.0.min.js"></script>
         <script src="script.js"></script>
+        <script>slider_init();</script>
 
     </body>
 

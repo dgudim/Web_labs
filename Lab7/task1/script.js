@@ -1,8 +1,3 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const project = urlParams.get('project')
-//get project name from url params
-//console.log(project);
 window.onscroll = function () { myFunction() };
 
 var header = document.getElementById("nav");
@@ -18,3 +13,41 @@ function myFunction() {
     content.classList.remove("content_sticky");
   }
 }
+
+window.slider_init = function() {
+
+  var slider_options = {
+    $AutoPlay: 0,
+    $SlideWidth: 720,
+    $ArrowNavigatorOptions: {
+      $Class: $JssorArrowNavigator$
+    },
+    $BulletNavigatorOptions: {
+      $Class: $JssorBulletNavigator$,
+      $SpacingX: 16,
+      $SpacingY: 16
+    }
+  };
+
+  var slider = new $JssorSlider$("slider", slider_options);
+
+  /*#region responsive code begin*/
+  
+  function ScaleSlider() {
+      var containerElement = slider.$Elmt.parentNode;
+      var containerWidth = containerElement.clientWidth;
+
+      if (containerWidth) {
+          slider.$ScaleWidth(containerWidth);
+      }
+      else {
+          window.setTimeout(ScaleSlider, 30);
+      }
+  }
+
+  ScaleSlider();
+
+  $Jssor$.$AddEvent(window, "load", ScaleSlider);
+  $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+  $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+};

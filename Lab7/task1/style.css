@@ -73,7 +73,6 @@ li a:hover {
 main {
     padding-top: 40px;
     background: var(--main-bg-color);
-    background: linear-gradient(0deg, var(--main-bg-color), 83%, var(--nav-bg-color) 100%);
 }
 
 #about {
@@ -95,7 +94,7 @@ main {
 
 #about_title {
     color: var(--main-font-color);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
 }
 
 #about_img {
@@ -119,7 +118,142 @@ p.description {
     font-size: 1.3rem;
 }
 
-@media only screen and (min-width: 1300px){
+.spin {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.spin img {
+    animation-name: spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-top: -19px;
+    position: relative;
+    top: 50%;
+    width: 38px;
+    height: 38px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+div#slides_container {
+    cursor: default;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 980px;
+    height: 380px;
+    overflow: hidden;
+}
+
+div#slider {
+    position: relative;
+    margin: 0 auto;
+    top: 0px;
+    left: 0px;
+    width: 980px;
+    height: 380px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#galerry_section_title_container {
+    text-align: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#galerry_section_title {
+    color: var(--main-font-color);
+    font-size: 1.5rem;
+}
+
+.bullet_navigator .bullet_circle {
+    position: absolute;
+    cursor: pointer;
+}
+
+.bullet_navigator .bullet_circle .bullet {
+    fill: #fff;
+    fill-opacity: 0.3;
+}
+
+.bullet_navigator .bullet_circle:hover .bullet {
+    fill-opacity: .7;
+}
+
+.bullet_navigator .bullet_circleav .bullet {
+    fill-opacity: 1;
+}
+
+.bullet_navigator .bullet_circle.bullet_circledn {
+    opacity: .3;
+}
+
+.arrow_navigator {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.arrow_navigator .arrow {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 360;
+    stroke-miterlimit: 10;
+}
+
+.arrow_navigator:hover {
+    opacity: .8;
+}
+
+.arrow_navigator.arrow_navigatordn {
+    opacity: .5;
+}
+
+.arrow_navigator.arrow_navigatords {
+    opacity: .3;
+    pointer-events: none;
+}
+
+#footer_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_button{
+    background: var(--accent-bg-color);
+    margin: 25px auto;
+    border-radius: 5px;
+    width: 300px;
+    display:flex;
+    flex-direction: row;
+}
+
+.footer_button img{
+    height: 120px;
+}
+
+.footer_button span{
+    color: var(--main-font-color);
+    font-size: 1.5rem;
+    margin: auto;
+}
+
+@media only screen and (min-width: 1300px) {
     #about {
         flex-wrap: nowrap;
     }
