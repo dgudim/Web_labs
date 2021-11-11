@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(queryString);
 const project = urlParams.get('project')
 //get project name from url params
 //console.log(project);
-window.onscroll = function() {myFunction()};
+window.onscroll = function () { myFunction() };
 
 var header = document.getElementById("nav");
 var content = document.getElementById("content");
@@ -18,4 +18,3 @@ function myFunction() {
     content.classList.remove("content_sticky");
   }
 }
-

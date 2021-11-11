@@ -6,11 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" type="text/css">
-        <title>Document</title>
+        <title>Attractor simulation</title>
     </head>
 
     <body>
-        <header>
+        <header id="header">
             <div id="project_name">
                 Attractor simulation
             </div>
@@ -19,7 +19,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#screenshots">Screenshots</a></li>
                     <li><a href="#contact">Sources</a></li>
-                    <li style="float:right"><a href="#top">Up</a></li>
+                    <li style="float:right"><a href="#project_name">Up</a></li>
                 </ul>
             </nav>
         </header>
@@ -34,12 +34,15 @@
                     </div>
                 </div>
                 <div class="description_section">
-                    <h2>Description</h2>
+                    <h2>What are attractors</h2>
+                    <hr>
                     <p class="description">
                         In the mathematical field of dynamical systems, an attractor is a set of states toward which a
                         system tends to evolve, for a wide variety of starting conditions of the system. System values
                         that get close enough to the attractor values remain close even if slightly disturbed.
-                        <br><br>A dynamical system is generally described by one or more differential or difference
+                    </p>
+                    <p class="description">
+                        A dynamical system is generally described by one or more differential or difference
                         equations. The
                         equations of a given dynamical system specify its behavior over any given short period of time.
                         To
@@ -49,17 +52,23 @@
                 </div>
                 <div class="description_section">
                     <h2>Implementation</h2>
+                    <hr>
                     <p class="description">
                         Take about 1 000 00 points, scatter them randomly on your simulation square, iterate each of the
                         points using some attarctor equations(for example Lorenz), at each iteration add some constant
                         value to an
-                        intensity map at every point's coordinate. Do about a million iterations. You will get an
+                        intensity map at each point's coordinate. Do about a million iterations. You will get an
                         intensity
                         map that can be converted to color map.
                     </p>
                 </div>
-
             </section>
+            <hr>
+            <div id="slider_container">
+                <button id="prev_img"></button>
+                <img src="images/attractor1.jpg" alt="" id="slideshow_img">
+                <button id="next_img"></button>
+            </div>
         </main>
         <footer>
 
