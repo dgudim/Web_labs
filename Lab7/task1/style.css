@@ -1,21 +1,17 @@
 :root {
     --main-bg-color: rgba(48, 48, 48, 1);
     --accent-bg-color: rgb(77, 77, 77);
-
     --nav-bg-color: #333;
     --nav-accent-color: rgb(36, 33, 30);
-    
     --main-border-color: white;
     --secondary-border-color: rgb(110, 110, 110);
     --accent-border-color: rgb(155, 155, 155);
-
     --main-font-color: white;
     --accent-font-color: rgb(255, 228, 206);
-
     --link-font-color: rgb(255, 228, 206);
     --link-over-font-color: rgb(252, 220, 195);
     --link-pressed-font-color: rgb(255, 209, 172);
-
+    --link-underline-color: rgb(255, 191, 172);
     scroll-behavior: smooth;
 }
 
@@ -26,15 +22,15 @@ body {
     font-size: 1rem;
 }
 
-a{
+a {
     color: var(--link-font-color);
 }
 
-a:hover{
+a:hover {
     color: var(--link-over-font-color);
 }
 
-a:active{
+a:active {
     color: var(--link-pressed-font-color);
 }
 
@@ -258,17 +254,25 @@ div#slider {
     padding: 25px;
 }
 
-#footer_container a{
+#footer_container a {
     margin: 15px auto;
+    text-decoration: none;
 }
 
-.inner_link_container{
+.inner_link_container {
     display: flex;
     flex-direction: row;
 }
 
-.link_text{
-   margin: auto 10px;
+.link_text {
+    margin: auto 10px;
+    text-decoration: underline 0.3em transparent;
+    transition: text-decoration-color 300ms, text-underline-offset 250ms;
+}
+
+.link_text:hover {
+    text-decoration-color: var(--link-underline-color);
+    text-underline-offset: 1px;
 }
 
 @media only screen and (min-width: 1300px) {
