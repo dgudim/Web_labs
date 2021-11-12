@@ -264,13 +264,13 @@ div#slider {
     flex-direction: row;
 }
 
-.link_text {
+.link_text{
     margin: auto 10px;
     text-decoration: underline 0.3em transparent;
     transition: text-decoration-color 300ms, text-underline-offset 250ms;
 }
 
-.link_text:hover {
+#footer_container a:hover .link_text {
     text-decoration-color: var(--link-underline-color);
     text-underline-offset: 1px;
 }
