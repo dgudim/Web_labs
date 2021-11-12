@@ -243,10 +243,6 @@ div#slider {
     flex-direction: row;
 }
 
-.footer_button img{
-    height: 120px;
-}
-
 .footer_button span{
     color: var(--main-font-color);
     font-size: 1.5rem;
