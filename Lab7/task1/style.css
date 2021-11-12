@@ -12,7 +12,22 @@
     --link-over-font-color: rgb(252, 220, 195);
     --link-pressed-font-color: rgb(255, 209, 172);
     --link-underline-color: rgb(255, 191, 172);
+    --scrollbar-color: rgb(255, 169, 88);
     scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px var(--accent-border-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-color);
+    border-radius: 10px;
 }
 
 body {
@@ -246,7 +261,7 @@ div#slider {
     pointer-events: none;
 }
 
-#more_articles_section{
+#more_articles_section {
     height: 500px;
     border-top: 1px solid var(--main-border-color);
 }
@@ -269,7 +284,7 @@ div#slider {
     flex-direction: row;
 }
 
-.link_text{
+.link_text {
     margin: auto 10px;
     text-decoration: underline 0.3em transparent;
     transition: text-decoration-color 300ms, text-underline-offset 250ms;
