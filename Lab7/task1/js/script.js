@@ -1,10 +1,10 @@
-window.onscroll = function () { myFunction() };
+window.onscroll = function () { scroll() };
 
 var header = document.getElementById("nav");
 var content = document.getElementById("content");
 var sticky = header.offsetTop;
 
-function myFunction() {
+function scroll() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
     content.classList.add("content_sticky");
