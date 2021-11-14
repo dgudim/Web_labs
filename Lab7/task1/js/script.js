@@ -1,3 +1,11 @@
+const queryString = window.location.search; //get url query params
+const urlParams = new URLSearchParams(queryString);
+const lang = urlParams.get('lang'); //get lang attribute
+
+window.onload = () => {
+  loadLocaleStrings();
+}
+
 window.onscroll = function () { scroll(); highlightCenter() };
 
 var header = document.getElementById("nav");
@@ -14,7 +22,7 @@ function scroll() {
   }
 }
 
-window.slider_init = function() {
+window.slider_init = function () {
 
   var slider_options = {
     $AutoPlay: 0,
@@ -65,12 +73,30 @@ function isElementInViewport(el) {
 
 function highlightCenter() {
   let articles = document.querySelectorAll(".useful_article");
-  
+
   for (let i = 0; i < articles.length; i++) {
-    if(isElementInViewport(articles[i])){
+    if (isElementInViewport(articles[i])) {
       articles[i].classList.add("hover");
-    }else{
+    } else {
       articles[i].classList.remove("hover");
+    }
+  }
+}
+
+function loadLocaleStrings() {
+  let localizedElements = document.querySelectorAll(".localized");
+  let currentLocale;
+  switch (lang) {
+    case "ru":
+      currentLocale = lang_ru;
+      break;
+  }
+  if (currentLocale != undefined) {
+    for (let i = 0; i < localizedElements.length; i++) {
+      let value = currentLocale[localizedElements[i].getAttribute("data-key")];
+      if(value != undefined){
+        localizedElements[i].innerHTML = value;
+      }
     }
   }
 }
