@@ -148,6 +148,7 @@ main {
     margin: 5px;
     width: 30%;
     flex: 1.5 0.8 45%;
+    font-size: 1rem;
 }
 
 p.description {
