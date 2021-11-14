@@ -1,4 +1,4 @@
-window.onscroll = function () { scroll() };
+window.onscroll = function () { scroll(); highlightCenter() };
 
 var header = document.getElementById("nav");
 var content = document.getElementById("content");
@@ -32,17 +32,17 @@ window.slider_init = function() {
   var slider = new $JssorSlider$("slider", slider_options);
 
   /*#region responsive code begin*/
-  
-  function ScaleSlider() {
-      var containerElement = slider.$Elmt.parentNode;
-      var containerWidth = containerElement.clientWidth;
 
-      if (containerWidth) {
-          slider.$ScaleWidth(containerWidth);
-      }
-      else {
-          window.setTimeout(ScaleSlider, 30);
-      }
+  function ScaleSlider() {
+    var containerElement = slider.$Elmt.parentNode;
+    var containerWidth = containerElement.clientWidth;
+
+    if (containerWidth) {
+      slider.$ScaleWidth(containerWidth);
+    }
+    else {
+      window.setTimeout(ScaleSlider, 30);
+    }
   }
 
   ScaleSlider();
@@ -51,3 +51,26 @@ window.slider_init = function() {
   $Jssor$.$AddEvent(window, "resize", ScaleSlider);
   $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
 };
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+  );
+}
+
+function highlightCenter() {
+  let articles = document.querySelectorAll(".useful_article");
+  
+  for (let i = 0; i < articles.length; i++) {
+    if(isElementInViewport(articles[i])){
+      articles[i].classList.add("hover");
+    }else{
+      articles[i].classList.remove("hover");
+    }
+  }
+}
