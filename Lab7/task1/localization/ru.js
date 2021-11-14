@@ -5,7 +5,7 @@ let lang_ru = {
     "nav_gallery": "Галерея",
     "nav_up": "Наверх",
     "click_to_visit": "Нажми, чтобы посетить",
-    "implementation_paragraph": "Take about 1 000 00 points, scatter them randomly on your simulation square, iterate each of the points using some attarctor equations(for example Lorenz), at each iteration add some constant value to an intensity map at each point's coordinate. Do about a million iterations. You will get an intensity map that can be converted to color map.",
+    "implementation_paragraph": "Возьмите около 1 000 00 точек, распределите их случайным образом на поле симуляции, проитерируйте каждую из точек, используя какие-нибудь уравнения (например, Лоренца), на каждой итерации добавьте некоторое постоянное значение в карту интенсивности по координатам  каждой из точек. Сделайте около миллиона итераций. Вы получите карту интенсивности, которую можно преобразовать в цветовую карту.",
     "visual_representation": "Визуальное представление полиномного аттрактора",
     "what_are_attractors": "Что такое аттракторы?",
     "implementation": "Имплементация",
