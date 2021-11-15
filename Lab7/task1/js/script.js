@@ -1,6 +1,11 @@
 const queryString = window.location.search; //get url query params
 const urlParams = new URLSearchParams(queryString);
-const lang = urlParams.get('lang'); //get lang attribute
+let lang = urlParams.get('lang'); //get lang attribute
+
+if(lang == undefined){
+  lang = getLang().split('-')[0];
+  document.location.search += "?lang="+lang;
+}
 
 window.onload = () => {
   loadLocaleStrings();
@@ -81,6 +86,12 @@ function highlightCenter() {
       articles[i].classList.remove("hover");
     }
   }
+}
+
+function getLang() {
+  if (navigator.languages != undefined)
+    return navigator.languages[0]; 
+  return navigator.language;
 }
 
 function loadLocaleStrings() {

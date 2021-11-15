@@ -121,7 +121,8 @@ main {
 
 #title_and_img {
     border: 1px solid var(--main-border-color);
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     padding: 5px;
     border-radius: 5px;
     text-align: center;
@@ -132,6 +133,10 @@ main {
 #about_title {
     color: var(--main-font-color);
     font-size: 1.25rem;
+}
+
+#img_container{
+    margin: auto;
 }
 
 #about_img {
@@ -452,7 +457,7 @@ div#slider {
     transition: text-decoration-color 300ms, text-underline-offset 250ms;
 }
 
-#footer_container a:hover .link_text {
+#footer a:hover .link_text {
     text-decoration-color: var(--link-underline-color);
     text-underline-offset: 1px;
 }
