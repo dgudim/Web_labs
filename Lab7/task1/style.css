@@ -244,8 +244,8 @@ div#slider {
     font-weight: normal;
     border: none;
     text-align: center;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid var(--main-border-color);
+    border-bottom: 1px solid var(--main-border-color);
     margin-top: 50px;
     padding: 1% 0;
 }
@@ -256,7 +256,7 @@ div#slider {
 }
 
 .bullet_navigator .bullet_circle .bullet {
-    fill: #fff;
+    fill: var(--main-border-color);
     fill-opacity: 0.3;
 }
 
@@ -280,7 +280,7 @@ div#slider {
 
 .arrow_navigator .arrow {
     fill: none;
-    stroke: #fff;
+    stroke: var(--main-border-color);
     stroke-width: 360;
     stroke-miterlimit: 10;
 }
