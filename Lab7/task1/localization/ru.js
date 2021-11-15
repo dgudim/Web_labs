@@ -20,7 +20,7 @@ let lang_ru = {
     "programming_lorenz_site": "Программирование аттрактора Лоренца",
     "chaos_theory_site": "Теория хаоса(визуализация аттракторов)",
     "more_images": "Больше картинок аттракторов",
-    "footer_sources":"Исходники",
+    "implementation_button":"Пример имплементации",
     "footer_other_projects":"Больше проектов",
     "footer_email":"Написать на почту",
     "footer_vk":"Написать в ВК",
