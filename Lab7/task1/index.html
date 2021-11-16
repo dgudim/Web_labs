@@ -87,8 +87,7 @@
                 </div>
             </section>
             <div id="more_acticles_anchor"></div>
-             <!-- TODO: Wavy transition -->
-            <section>
+            <section class="border_before">
                 <h2 class="section_title localized" data-key="usefull_info">Usefull info about attractors</h2>
                 <div id="more_articles_section">
                     <article class="useful_article" id="article1">
@@ -159,59 +158,62 @@
                 </div>
             </section>
             <div id="gallery_anchor"></div>
-            <h2 class="section_title localized" data-key="more_images">More images of attractors</h2>
-            <div id="slider">
-                <!-- Loading Screen -->
-                <div data-u="loading" class="spin">
-                    <img src="images/spin.svg" alt="loading_image_svg" />
-                </div>
-                <div data-u="slides" id="slides_container">
-                    <div>
-                        <img data-u="image" src="images/attractor1.png" alt="attractor 1" />
+            <section class="border_before">
+                <h2 class="section_title localized" data-key="more_images">More images of attractors</h2>
+                <div id="slider">
+                    <!-- Loading Screen -->
+                    <div data-u="loading" class="spin">
+                        <img src="images/spin.svg" alt="loading_image_svg" />
                     </div>
-                    <div>
-                        <img data-u="image" src="images/attractor2.png" alt="attractor 2" />
+                    <div data-u="slides" id="slides_container">
+                        <div>
+                            <img data-u="image" src="images/attractor1.png" alt="attractor 1" />
+                        </div>
+                        <div>
+                            <img data-u="image" src="images/attractor2.png" alt="attractor 2" />
+                        </div>
+                        <div>
+                            <img data-u="image" src="images/attractor3.png" alt="attractor 3" />
+                        </div>
+                        <div>
+                            <img data-u="image" src="images/attractor4.png" alt="attractor 4" />
+                        </div>
+                        <div>
+                            <img data-u="image" src="images/attractor5.png" alt="attractor 5" />
+                        </div>
                     </div>
-                    <div>
-                        <img data-u="image" src="images/attractor3.png" alt="attractor 3" />
+                    <!-- Bullet Navigator -->
+                    <div data-u="navigator" class="bullet_navigator" style="position:absolute;bottom:16px;right:16px;"
+                        data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                        <div data-u="prototype" class="bullet_circle" style="width:12px;height:12px;">
+                            <svg viewbox="0 0 16000 16000"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <circle class="bullet" cx="8000" cy="8000" r="5800"></circle>
+                            </svg>
+                        </div>
                     </div>
-                    <div>
-                        <img data-u="image" src="images/attractor4.png" alt="attractor 4" />
-                    </div>
-                    <div>
-                        <img data-u="image" src="images/attractor5.png" alt="attractor 5" />
-                    </div>
-                </div>
-                <!-- Bullet Navigator -->
-                <div data-u="navigator" class="bullet_navigator" style="position:absolute;bottom:16px;right:16px;"
-                    data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
-                    <div data-u="prototype" class="bullet_circle" style="width:12px;height:12px;">
+                    <!-- Arrow Navigator -->
+                    <div data-u="arrowleft" class="arrow_navigator" style="width:65px;height:65px;top:0px;left:35px;"
+                        data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
                         <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                            <circle class="bullet" cx="8000" cy="8000" r="5800"></circle>
+                            <polyline class="arrow" points="11040,1920 4960,8000 11040,14080 "></polyline>
+                        </svg>
+                    </div>
+                    <div data-u="arrowright" class="arrow_navigator" style="width:65px;height:65px;top:0px;right:35px;"
+                        data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                        <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                            <polyline class="arrow" points="4960,1920 11040,8000 4960,14080 "></polyline>
                         </svg>
                     </div>
                 </div>
-                <!-- Arrow Navigator -->
-                <div data-u="arrowleft" class="arrow_navigator" style="width:65px;height:65px;top:0px;left:35px;"
-                    data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                        <polyline class="arrow" points="11040,1920 4960,8000 11040,14080 "></polyline>
-                    </svg>
+                <div id="vertical_galery">
+                    <img class="img_vertical" src="images/attractor1.png" alt="attractor 1" />
+                    <img class="img_vertical" src="images/attractor2.png" alt="attractor 2" />
+                    <img class="img_vertical" src="images/attractor3.png" alt="attractor 3" />
+                    <img class="img_vertical" src="images/attractor4.png" alt="attractor 4" />
+                    <img class="img_vertical" src="images/attractor5.png" alt="attractor 5" />
                 </div>
-                <div data-u="arrowright" class="arrow_navigator" style="width:65px;height:65px;top:0px;right:35px;"
-                    data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-                    <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                        <polyline class="arrow" points="4960,1920 11040,8000 4960,14080 "></polyline>
-                    </svg>
-                </div>
-            </div>
-            <div id="vertical_galery">
-                <img class="img_vertical" src="images/attractor1.png" alt="attractor 1" />
-                <img class="img_vertical" src="images/attractor2.png" alt="attractor 2" />
-                <img class="img_vertical" src="images/attractor3.png" alt="attractor 3" />
-                <img class="img_vertical" src="images/attractor4.png" alt="attractor 4" />
-                <img class="img_vertical" src="images/attractor5.png" alt="attractor 5" />
-            </div>
+            </section>
         </main>
         <footer id="footer">
             <a href="https://github.com/dgudim?tab=repositories" target="_blank" class="default_link">
