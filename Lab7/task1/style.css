@@ -125,6 +125,7 @@ main {
 
 #title_and_img {
     border: 1px solid var(--main-border-color);
+    box-shadow: -1.5px 1.5px 0 var(--main-border-color);
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -153,6 +154,7 @@ main {
     border: 1px solid var(--main-border-color);
     border-radius: 5px;
     background: var(--accent-bg-color);
+    box-shadow: -1.5px 1.5px 0 var(--main-border-color);
     padding: 10px;
     margin: 5px;
     width: 30%;
@@ -439,7 +441,18 @@ a#implementation_link {
     margin: auto auto 0 0;
     border: 1px solid var(--secondary-border-color);
     border-radius: 5px;
+    box-shadow: -1.5px 1.5px 0 var(--secondary-border-color);
     padding: 2px;
+}
+
+a#implementation_link:hover {
+    transform: translate(-0.5px, 0.5px);
+    box-shadow: -1px 1px 0 var(--secondary-border-color);
+}
+
+a#implementation_link:active {
+    transform: translate(-1px, 1px);
+    box-shadow: -0.5px 0.5px 0 var(--secondary-border-color);
 }
 
 .inner_link_container {
@@ -450,6 +463,7 @@ a#implementation_link {
 .link_text {
     margin: auto 10px;
     text-decoration: underline 0.3em transparent;
+    text-underline-position: under;
     transition: text-decoration-color 300ms, text-underline-offset 250ms;
 }
 
