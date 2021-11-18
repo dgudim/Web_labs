@@ -1,7 +1,7 @@
 let lang_ru = {
     "title": "Красивый мир аттракторов",
     "nav_info": "Информация",
-    "nav_more_articles": "Больше информации",
+    "nav_more_articles": "Статьи",
     "nav_gallery": "Галерея",
     "nav_up": "Наверх",
     "click_to_visit": "Нажми, чтобы посетить",

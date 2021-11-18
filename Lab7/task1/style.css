@@ -96,6 +96,12 @@ li a {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 400px) {
+    li a {
+        padding: 14px 8px;
+    }
+}
+
 li a:hover {
     background-color: var(--nav-accent-color);
 }
@@ -195,6 +201,7 @@ p.description {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -238,6 +245,7 @@ div#slider {
     #vertical_galery {
         display: block;
     }
+
     div#slider {
         display: none;
     }
@@ -368,14 +376,17 @@ div#slider {
         box-shadow: 0 0 10px var(--over-shadow-color);
         transform: scale(1.01);
     }
+
     .useful_article.hover h2 {
         color: var(--main-font-color);
         border-bottom: 1px solid var(--secondary-border-color);
     }
+
     .useful_article.hover span {
         color: var(--link-over-color);
         text-decoration-color: var(--link-underline-color);
     }
+
     .useful_article.hover a .article_content {
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
@@ -488,6 +499,34 @@ a.default_link:hover .link_text {
     #about_img {
         width: 90%;
     }
+}
+
+@media only screen and (min-width: 800px) {
+    #mobile_button_top {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #nav_up {
+        display: none;
+    }
+}
+
+#mobile_button_top {
+    position: fixed;
+    background: var(--accent-bg-color);
+    border-radius: 50%;
+    border: 1px solid var(--secondary-border-color);
+    width: 60px;
+    height: 60px;
+    bottom: 5px;
+    right: 5px;
+    text-align: center;
+}
+
+#mobile_button_top_arrow {
+    margin-top: calc(50% - 17px);
 }
 
 .border_before::before {
