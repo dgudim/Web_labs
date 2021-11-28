@@ -6,17 +6,72 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" type="text/css">
+        <script type="text/javascript" src="js/fontawsome.js"></script>
         <title>Supabase - the open source firebase alternative</title>
     </head>
 
     <body>
         <header>
             <nav>
-                
+                <div id="nav_inner_container">
+                    <div id="nav_inner_container_flex">
+                        <div id="nav_logo_and_nav">
+                            <div id="nav_logo_container"><a href="/">
+                                    <img id="nav_logo" src="images/supabase-logo.svg" alt="Logo"></a></div>
+                            <div id="nav_nav_container">
+                                <div class="nav_item">
+                                    <span>Product</span>
+                                    <svg class="nav_item_dropdown" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="nav_item">
+                                    <span>Developers</span>
+                                    <svg class="nav_item_dropdown" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div><a href="/beta" class="nav_item_a">Beta</a>
+                                <a href="/pricing" class="nav_item_a">Pricing</a>
+                            </div>
+                        </div>
+                        <div id="nav_buttons_container">
+                            <button class="button accent_button">
+                                Start your project
+                            </button>
+                            <button class="button transparent_button">
+                                Sign in
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </header>
         <main>
-
+            <section>
+                <div>
+                    <div class="icon_container">
+                        <div class="icon">
+                            <i class="fas fa-archive"></i>
+                        </div>
+                        <div class="icon_text">
+                            Storage
+                        </div>
+                    </div>
+                    <h1>Store and serve any type of digital content</h1>
+                    <div id="main_section_p_container">
+                        <p>An open source Object store service with unlimited scalability, for any file type.</p>
+                        <p>With custom policies and permissions that are familiar and easy to implement.</p>
+                    </div>
+                    <button class="button accent_button button_section">Start a project</button>
+                </div>
+                <div><img src="images/main_section.png" alt="brief"></div>
+            </section>
         </main>
         <footer>
 
