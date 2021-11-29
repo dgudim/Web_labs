@@ -4,11 +4,18 @@
     --main-border-color: rgb(44, 44, 44);
     --light-border-color: rgb(85, 85, 85);
     --main-font-color: white;
+    --main-font-color-darker: rgb(223, 222, 222);
+    --main-font-color-darker-darker: rgb(109, 109, 109);
     --inactive-font-color: rgb(85, 84, 84);
-    --main-font-color-inverse: rgb(109, 109, 109);
     --button-color: rgb(61, 61, 61);
+    --button-color-over: rgb(83, 83, 83);
+    --button-color-active: rgb(49, 49, 49);
     --accent-button-color: rgb(36, 180, 126);
+    --accent-button-color-over: rgb(41, 199, 141);
+    --accent-button-color-active: rgb(35, 153, 110);
     --accent-button-color-blue: rgb(19, 116, 239);
+    --accent-button-color-blue-over: rgb(43, 127, 236);
+    --accent-button-color-blue-active: rgb(18, 94, 192);
 
     --coming-soon-font-color: rgb(66, 148, 255);
     --coming-soon-background-color: rgba(19, 114, 239, 0.253);
@@ -88,6 +95,14 @@ nav {
     color: var(--main-font-color)
 }
 
+.nav_item:hover, .nav_item_a:hover{
+    color: var(--main-font-color-darker)
+}
+
+.nav_item:active, .nav_item_a:active{
+    color: var(--main-font-color-darker-darker)
+}
+
 .nav_item_dropdown {
     width: 1.25rem;
     height: 1.25rem;
@@ -119,20 +134,64 @@ nav {
     background-color: var(--button-color)
 }
 
+.button:hover{
+    background-color: var(--button-color-over)
+}
+
+.button:active{
+    background-color: var(--button-color-active)
+}
+
 .accent_button {
     background-color: var(--accent-button-color);
+}
+
+.accent_button:hover {
+    background-color: var(--accent-button-color-over);
+}
+
+.accent_button:active {
+    background-color: var(--accent-button-color-active);
 }
 
 .accent_button_blue {
     background-color: var(--accent-button-color-blue);
 }
 
+.accent_button_blue:hover {
+    background-color: var(--accent-button-color-blue-over);
+}
+
+.accent_button_blue:active {
+    background-color: var(--accent-button-color-blue-active);
+}
+
 .transparent_button {
+    background-color: transparent;
+}
+
+.transparent_button:hover {
+    color: var(--main-font-color-darker);
+    background-color: transparent;
+}
+
+.transparent_button:active {
+    color: var(--main-font-color-darker-darker);
     background-color: transparent;
 }
 
 .inactive_button {
     color: var(--inactive-font-color);
+    background-color: transparent;
+}
+
+.inactive_button:hover{
+    color: var(--main-font-color-darker-darker);
+    background-color: transparent;
+}
+
+.inactive_button:active{
+    color: var(--main-font-color-darker);
     background-color: transparent;
 }
 
@@ -317,7 +376,7 @@ section h1 {
 }
 
 #section6 span#inactive {
-    color: var(--main-font-color-inverse);
+    color: var(--main-font-color-darker-darker);
 }
 
 .section_grid_70 {
@@ -368,7 +427,7 @@ section h1 {
 
 .icon i {
     margin: auto auto;
-    color: var(--main-font-color-inverse);
+    color: var(--main-font-color-darker-darker);
 }
 
 footer {
@@ -418,7 +477,19 @@ footer span{
 }
 
 footer i{
-    color: lightgrey
+    color: var(--main-font-color-darker)
+}
+
+#footer_git_twitter i{
+    color: var(--inactive-font-color)
+}
+
+#footer_git_twitter i:hover{
+    color: var(--main-font-color-darker-darker)
+}
+
+#footer_git_twitter i:active{
+    color: var(--main-font-color-darker)
 }
 
 .switch {
@@ -441,7 +512,7 @@ footer i{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: lightgrey;
+    background-color: var(--main-font-color-darker-darker);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -470,7 +541,7 @@ input:checked+.slider:before {
     -webkit-transform: translateX(20px);
     -ms-transform: translateX(20px);
     transform: translateX(20px);
-    background-color: var(--main-font-color-inverse);
+    background-color: var(--main-font-color-darker-darker);
 }
 
 .slider.round {
