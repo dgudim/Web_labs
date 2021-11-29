@@ -147,8 +147,17 @@ nav {
     background: var(--coming-soon-background-color);
     color: var(--coming-soon-font-color);
     border-radius: 1rem;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 0.7rem;
     margin-right: auto;
+}
+
+#documentation_button {
+    margin-right: auto;
+    padding: 0.25rem  0.5rem
+}
+
+#documentation_button i{
+    margin: 0.25rem 0.5rem;
 }
 
 main {
@@ -261,10 +270,13 @@ section h1 {
     margin-right: auto;
 }
 
-#section4 {
+#section4, #section5 {
     display: grid;
     grid-template-columns: 35% 65%;
     margin-top: 9rem;
+}
+
+#section4 {
     padding-bottom: 3rem;
     border-bottom: 1px solid var(--main-border-color);
 }
