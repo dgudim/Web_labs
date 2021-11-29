@@ -1,14 +1,23 @@
 :root {
     --main-bg-color: rgb(24, 24, 24);
+    --light-bg-color: rgb(32, 32, 32);
     --main-border-color: rgb(44, 44, 44);
+    --light-border-color: rgb(85, 85, 85);
     --main-font-color: white;
+    --inactive-font-color: rgb(85, 84, 84);
     --main-font-color-inverse: rgb(109, 109, 109);
+    --button-color: rgb(61, 61, 61);
     --accent-button-color: rgb(36, 180, 126);
+    --accent-button-color-blue: rgb(19, 116, 239);
+
+    --coming-soon-font-color: rgb(66, 148, 255);
+    --coming-soon-background-color: rgba(19, 114, 239, 0.253);
 }
 
 * {
     box-sizing: border-box;
     font-family: "Helvetica Neue", Helvetica, Arial;
+    font-weight: normal;
 }
 
 body, header {
@@ -107,13 +116,23 @@ nav {
     margin: 0.25rem;
     border: none;
     color: var(--main-font-color);
+    background-color: var(--button-color)
 }
 
 .accent_button {
     background-color: var(--accent-button-color);
 }
 
+.accent_button_blue {
+    background-color: var(--accent-button-color-blue);
+}
+
 .transparent_button {
+    background-color: transparent;
+}
+
+.inactive_button {
+    color: var(--inactive-font-color);
     background-color: transparent;
 }
 
@@ -124,32 +143,54 @@ nav {
     margin-right: auto;
 }
 
+.coming_soon {
+    background: var(--coming-soon-background-color);
+    color: var(--coming-soon-font-color);
+    border-radius: 1rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: auto;
+}
+
 main {
     padding-top: 6rem;
 }
 
-#main_section_p_container{
+#main_section_p_container {
     margin: auto 0;
     margin-right: 30%;
     font-size: 0.9rem;
 }
 
-#section1 {
+section {
     width: 100%;
     max-width: 1300px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     color: var(--main-font-color)
 }
 
-section div{
+#section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--main-font-color)
+}
+
+section div {
     display: flex;
     flex-direction: column;
 }
 
+h2 {
+    font-size: 2.5rem;
+    margin-top: 0
+}
+
+section h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
 #section1 h1 {
-    font-size: 3.2rem
+    font-weight: bold;
 }
 
 #section1 img {
@@ -157,30 +198,97 @@ section div{
     width: 100%;
 }
 
-#section2{
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
+#section2 {
     margin-top: 5rem;
     margin-bottom: 10rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.section2_elem_icons{
+.section2_elem_icons {
     display: flex;
     flex-direction: row;
 }
-.section2_elem_icons .icon_container{
+
+.section2_elem_icons .icon_container {
     margin-right: 0.3rem;
 }
 
-.section2_inner_grid_elem{
+.section2_inner_grid_elem {
     width: 60%;
-    color: var(--main-font-color)
 }
 
-.icon_container{
+#section3 {
+    display: flex;
+    flex-direction: column;
+}
+
+#section3_grid {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    margin-top: 4.3rem;
+}
+
+#section3_grid1 {
+    width: 75%
+}
+
+.flex_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 0.3rem;
+}
+
+#section3_grid_right_elem {
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+#example_app {
+    background-color: var(--light-bg-color);
+    padding: 1rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid var(--main-border-color);
+}
+
+#deploy_js {
+    margin: 1.7rem 0;
+    margin-left: 2rem;
+}
+
+#deploy_js_button {
+    margin-top: 1rem;
+    margin-right: auto;
+}
+
+#section4 {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    margin-top: 9rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--main-border-color);
+}
+
+#section4_cdn_and_auto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+}
+
+#section4_cdn_and_auto .section4_card {
+    width: 80%;
+}
+
+.section_grid_70 {
+    width: 70%;
+    margin-left: auto
+}
+
+.secondary {
+    font-size: 0.8rem
+}
+
+.icon_container {
     margin-right: auto;
     display: flex;
     flex-direction: row;
@@ -195,12 +303,24 @@ section div{
     background-color: var(--main-font-color)
 }
 
-.icon_no_background{
+#example_app_logo {
+    width: 2rem !important;
+    margin-left: 0.3rem !important;
+}
+
+#example_app_logo img {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--light-border-color);
+    border-radius: 50%;
+}
+
+.icon_no_background {
     width: 1rem;
     background-color: transparent
 }
 
-.icon_text{
+.icon_text {
     margin: auto 0;
     color: var(--main-font-color)
 }
