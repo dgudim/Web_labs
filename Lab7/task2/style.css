@@ -2,7 +2,7 @@
     --main-bg-color: rgb(24, 24, 24);
     --main-border-color: rgb(44, 44, 44);
     --main-font-color: white;
-    --main-font-color-inverse: rgb(54, 54, 54);
+    --main-font-color-inverse: rgb(109, 109, 109);
     --accent-button-color: rgb(36, 180, 126);
 }
 
@@ -134,7 +134,7 @@ main {
     font-size: 0.9rem;
 }
 
-section {
+#section1 {
     width: 100%;
     max-width: 1300px;
     display: grid;
@@ -148,13 +148,36 @@ section div{
     flex-direction: column;
 }
 
-section h1 {
+#section1 h1 {
     font-size: 3.2rem
 }
 
-section img {
+#section1 img {
     display: inline-block;
     width: 100%;
+}
+
+#section2{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.section2_elem_icons{
+    display: flex;
+    flex-direction: row;
+}
+.section2_elem_icons .icon_container{
+    margin-right: 0.3rem;
+}
+
+.section2_inner_grid_elem{
+    width: 60%;
+    color: var(--main-font-color)
 }
 
 .icon_container{
@@ -164,18 +187,25 @@ section img {
 }
 
 .icon {
-    padding: 0.45rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 0.25rem;
     margin-right: 0.3rem;
-    display: inline-block;
-    width: 100%;
+    display: inline-flex;
     background-color: var(--main-font-color)
+}
+
+.icon_no_background{
+    width: 1rem;
+    background-color: transparent
 }
 
 .icon_text{
     margin: auto 0;
+    color: var(--main-font-color)
 }
 
 .icon i {
+    margin: auto auto;
     color: var(--main-font-color-inverse);
 }
