@@ -221,8 +221,6 @@ nav {
 
 main {
     padding-top: 6rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 #main_section_p_container {
@@ -392,7 +390,7 @@ section h1 {
 }
 
 @media only screen and (max-width: 800px){
-    #section5 {
+    #section5, #section4{
         grid-template-columns: 100%;
     }
 }
@@ -434,6 +432,13 @@ section h1 {
 @media only screen and (max-width: 1000px) {
     .section_grid_70{
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .section_grid_70{
+        width: 100%;
+        margin-top: 1rem;
     }
 }
 
@@ -494,6 +499,18 @@ footer {
     padding-bottom: 7rem;
     margin-bottom: 3rem;
     border-bottom: 1px solid var(--main-border-color);
+}
+
+@media only screen and (max-width: 800px) {
+    #footer_grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #footer_grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
 }
 
 #footer_logo {
