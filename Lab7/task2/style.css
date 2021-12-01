@@ -221,6 +221,8 @@ nav {
 
 main {
     padding-top: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 #main_section_p_container {
@@ -230,6 +232,8 @@ main {
 }
 
 section, footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
@@ -240,6 +244,12 @@ section, footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: var(--main-font-color)
+}
+
+@media only screen and (max-width: 800px){
+    #section1 {
+        grid-template-columns: 1fr;
+    }
 }
 
 section div {
@@ -255,6 +265,19 @@ h2 {
 section h1 {
     font-size: 3.2rem;
     margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    section h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
 }
 
 #section1 h1 {
@@ -299,6 +322,12 @@ section h1 {
 
 #section3_grid1 {
     width: 75%
+}
+
+@media only screen and (max-width: 1000px) {
+    #section3_grid1 {
+        width: 95%
+    }
 }
 
 .flex_buttons {
@@ -382,6 +411,12 @@ section h1 {
 .section_grid_70 {
     width: 70%;
     margin-left: auto
+}
+
+@media only screen and (max-width: 1000px) {
+    .section_grid_70{
+        width: 90%;
+    }
 }
 
 .secondary {
