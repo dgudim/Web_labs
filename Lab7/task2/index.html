@@ -49,8 +49,21 @@
                             </button>
                         </div>
                     </div>
+                    <a href="javascript:void(0);" id="burger_menu" class="nav_item_a" onclick="show_burger()">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </a>
                 </div>
             </nav>
+            <div id="burger_dropdown">
+                <a class="nav_item_a" href="#">Product</a>
+                <a class="nav_item_a"href="#">Developers</a>
+                <a class="nav_item_a" href="#">Beta</a>
+                <a class="nav_item_a" href="#">Pricing</a>
+                <a class="nav_item_a" href="#">Sign in</a>
+                <button class="button accent_button">
+                    Start your project
+                </button>
+            </div>
         </header>
         <main>
             <section id="section1">
@@ -325,6 +338,17 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            let burger_menu = document.getElementById("burger_dropdown");
+            function show_burger(){
+                if(burger_menu.style.display == ""){
+                    burger_menu.style.display = "flex";
+                }else{
+                    burger_menu.style.display = "";
+                }
+            }
+        </script>
 
     </body>
 
