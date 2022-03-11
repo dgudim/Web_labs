@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#flex_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.grid_container {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1;
+    margin: 0 0.1em;
+
+}
+
+.btn_a {
+    min-width: 290px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    color: inherit;
+    font-size: inherit;
+    padding: 2rem;
+    border-radius: 0.2em;
+    border: none;
+    margin: 0.1em 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn span.main_text {
+    width: 100%;
+    transition-duration: 0.2s;
+    margin: auto;
+}
+
+.btn span.additional_text {
+    font-size: 0;
+    transition-duration: 0.5s;
+}
+
+.btn span.additional_text_full {
+    font-size: 0;
+    transition-duration: 0.5s;
+    position: absolute;
+    transform: TranslateY(-0.7em);
+}
+
+.btn:hover span.additional_text, .btn:hover span.additional_text_full{
+    font-size: 0.85em;
+}
+
+.btn:hover span.main_text {
+    transform: TranslateY(-0.5em);
+}
+
+.btn:hover span.near_full {
+    color: transparent;
+}
+
+.btn_regular {
+    height: 120px
+}
+
+.btn_img {
+    height: calc(240px + 0.2em);
+    padding: 0.2rem;
+}
+
+.btn_img .img_container {
+    height: 100%;
+    transition-duration: 0.2s;
+    margin: auto
+}
+
+.btn_img:hover span.additional_text {
+    margin-bottom: 0.5em;
+}
+
+.btn_img:hover .img_container {
+    height: 80%;
+}
+
+.img_container img{
+    height: 100%;
+}
+
+.red {
+    background: #6a1a1c;
+}
+
+.red_light {
+    background: #8f4446;
+}
+
+.green {
+    background: #6e9e63;
+}
+
+.blue {
+    background: #0e446a;
+}
+
+.orange {
+    background: #a6441f;
+}
