@@ -18,11 +18,10 @@ body {
     align-items: center;
     flex: 1 1;
     margin: 0 0.1em;
-
 }
 
 .btn_a {
-    min-width: 290px;
+    min-width: 330px;
     width: 100%;
     text-decoration: none;
     color: white;
@@ -31,44 +30,54 @@ body {
 .btn {
     color: inherit;
     font-size: inherit;
-    padding: 2rem;
+    padding: 5px;
     border-radius: 0.2em;
     border: none;
     margin: 0.1em 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 100%;
 }
 
 .btn span.main_text {
     width: 100%;
-    transition-duration: 0.2s;
-    margin: auto;
+    max-height: 2em;
+    text-align: center;
+    transition-duration: 0.3s;
 }
 
-.btn span.additional_text {
-    font-size: 0;
-    transition-duration: 0.5s;
+.btn span.main_text:only-child {
+    transition-duration: 0.15s;
 }
 
-.btn span.additional_text_full {
-    font-size: 0;
-    transition-duration: 0.5s;
-    position: absolute;
-    transform: TranslateY(-0.7em);
+.btn:hover span.main_text:only-child {
+    transform: translateY(-0.5em);
 }
 
-.btn:hover span.additional_text, .btn:hover span.additional_text_full{
-    font-size: 0.85em;
+.btn span.additional_text, .btn span.additional_text_full {
+    color: transparent;
+    max-height: 0;
+    transition-duration: 0.3s;
 }
 
-.btn:hover span.main_text {
-    transform: TranslateY(-0.5em);
+.btn:hover span.additional_text, .btn:hover span.additional_text_full {
+    color: white;
+}
+
+.btn:hover span.additional_text {
+    max-height: 2em;
+}
+
+.btn:hover span.additional_text_full {
+    max-height: 5em;
 }
 
 .btn:hover span.near_full {
     color: transparent;
+    max-height: 0;
+    margin: 0;
 }
 
 .btn_regular {
@@ -77,24 +86,23 @@ body {
 
 .btn_img {
     height: calc(240px + 0.2em);
-    padding: 0.2rem;
+    padding: 0.1rem;
 }
 
-.btn_img .img_container {
+.btn_img span{
+    z-index: 10;
+}
+
+.img_container{
+    transition-duration: 0.3s;
     height: 100%;
-    transition-duration: 0.2s;
-    margin: auto
-}
-
-.btn_img:hover span.additional_text {
-    margin-bottom: 0.5em;
 }
 
 .btn_img:hover .img_container {
-    height: 80%;
+    height: 70%;
 }
 
-.img_container img{
+.img_container img {
     height: 100%;
 }
 
