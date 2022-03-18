@@ -1,3 +1,62 @@
+@charset "utf-8";
+
+/* 
+styles fo upper part of the page
+*/
+
+h1 {
+    font-family: OpenSans, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.block, .block:active, .block:hover, .block:focus {
+    text-decoration: none;
+    color: #375983;
+    font-family: OpenSans, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 100px;
+    display: block;
+    transition-duration: 0.2s;
+}
+
+.block>p {
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.block1>img {
+    height: 70px;
+}
+
+.block2>img {
+    height: 90px;
+    margin-bottom: -20px;
+}
+
+.block3>img {
+    height: 60px;
+    margin-top: 10px;
+}
+
+.container {
+    height: 510px;
+    width: 833px;
+    margin-left: 100px;
+    margin-top: 100px;
+    font-family: sans-serif;
+}
+
+
+/* end section */
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -21,9 +80,9 @@ body {
 }
 
 .btn_a {
-    min-width: 330px;
+    min-width: 270px;
     width: 100%;
-    text-decoration: none;
+    text-decoration: none !important;
     color: white;
 }
 
@@ -43,7 +102,7 @@ body {
 
 .btn span.main_text {
     width: 100%;
-    max-height: 2em;
+    max-height: 3em;
     text-align: center;
     transition-duration: 0.3s;
 }
@@ -60,6 +119,7 @@ body {
     color: transparent;
     max-height: 0;
     transition-duration: 0.3s;
+    font-size: 0.85em;
 }
 
 .btn:hover span.additional_text, .btn:hover span.additional_text_full {
@@ -81,29 +141,26 @@ body {
 }
 
 .btn_regular {
-    height: 120px
+    height: 110px
 }
 
 .btn_img {
-    height: calc(240px + 0.2em);
+    height: calc(220px + 0.2em);
     padding: 0.1rem;
 }
 
-.btn_img span{
+.btn_img span {
     z-index: 10;
 }
 
-.img_container{
+.b_img_block {
     transition-duration: 0.3s;
     height: 100%;
+    display: block;
 }
 
-.btn_img:hover .img_container {
-    height: 70%;
-}
-
-.img_container img {
-    height: 100%;
+.btn_img:hover .b_img_block {
+    height: 80%;
 }
 
 .red {
