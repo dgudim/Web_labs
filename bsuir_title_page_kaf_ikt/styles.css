@@ -155,12 +155,13 @@ body {
 
 .b_img_block {
     transition-duration: 0.3s;
-    height: 100%;
+    height: 90%;
     display: block;
 }
 
 .btn_img:hover .b_img_block {
     height: 80%;
+    margin-bottom: 0.25em;
 }
 
 .red {
