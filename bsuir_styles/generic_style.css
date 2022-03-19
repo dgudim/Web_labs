@@ -30,8 +30,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     flex: 1 1;
     margin: 0 var(--button-margin);
+}
+
+.img_container img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.img_container {
+    min-width: 270px;
 }
 
 .btn_a {
