@@ -17,7 +17,7 @@ h3 {
     max-width: 1300px;
 }
 
-#flex_main {
+#flex_inner {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
