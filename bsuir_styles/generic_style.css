@@ -66,6 +66,10 @@
     width: 100%;
 }
 
+.btn span.large {
+    font-size: 2rem;
+}
+
 .btn span.main_text {
     width: 100%;
     max-height: 3em;
